@@ -1,0 +1,10 @@
+<h1 class="my-4 text-center"><%= @task.title %></h1>
+<h2 class="text-muted mb-3"><%= @task.details %></h2>
+<p class="text-success">
+  <%= @task.completed ? 'Complétée' : 'Cette tâche n\'est pas encore terminée' %>
+</p>
+
+<div class="d-flex flex-column my-4">
+  <p><%= link_to "Modifier cette tâche", edit_task_path, class: "btn btn-warning btn-sm mb-2" %></p>
+  <p><%= link_to "Retour à la liste", tasks_path, class: "btn btn-primary btn-sm" %></p>
+</div>
